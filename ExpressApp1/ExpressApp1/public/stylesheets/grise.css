@@ -1,0 +1,13 @@
+﻿.myPanel {
+    margin: 3%;
+    border: 2px solid bisque;
+}
+
+.myPanel .heading {
+    background: aqua;
+    border-radius: 4px 4px 0 0 ;
+}
+
+.myPanel .body {
+    padding: 10px 20px;
+}

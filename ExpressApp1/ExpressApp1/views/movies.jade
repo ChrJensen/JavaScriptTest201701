@@ -1,0 +1,28 @@
+﻿extends layout
+
+block content
+  h2 #{title}
+  h3 #{message}
+ 
+  - var movieList = [    {      title: "Ocean's Eleven",      cast: ["Julia Roberts", "George Clooney", "Brad Pitt", "Andy Garcia"],      genres: ["Comedy", "Thriller"],      posterImage: "/images/Ocean'sEleven(1960)Poster.jpg",      imdbURL: "http://www.imdb.com/title/tt0240772/",      rating: 9.2    },    {      title: "Pirates of the Caribbean",      cast: ["Johnny Depp", "Keira Knightley", "Orlando Bloom"],      genres: ["Adventure", "Comedy"],      posterImage: "/images/PiratesOfTheCaribbian.jpg",      imdbURL: "http://www.imdb.com/title/tt0325980/",      rating: 9.7    }  ];
+  
+  for movie in movieList
+     +movie-card(movie)
+
+  mixin movie-card(movie)
+    div.movie-card
+      a(href=movie.imdbURL)
+        h2.movie-title= movie.title
+      img.movie-poster(src=movie.posterImage, height="200px")
+      h3 Cast
+      ul.cast
+      each actor in movie.cast
+        li= actor
+      div.rating
+        if movie.rating > 5
+          img(src="images/thumbs-up.jpg", height="40px")
+        else
+          img(src="images/thumbs-down.png", height="40px")
+      ul.genre
+        each genre in movie.genres
+          li= genre

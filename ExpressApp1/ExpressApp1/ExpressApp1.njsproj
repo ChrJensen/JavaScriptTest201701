@@ -34,6 +34,10 @@
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="public\images\Ocean%27sEleven%281960%29Poster.jpg" />
+    <Content Include="public\images\PiratesOfTheCaribbian.jpg" />
+    <Content Include="public\images\thumbs-down.png" />
+    <Content Include="public\images\thumbs-up.jpg" />
     <Content Include="public\javascripts\bootstrap.js" />
     <Content Include="public\javascripts\bootstrap.min.js" />
     <Content Include="public\javascripts\jquery-1.10.2.intellisense.js" />
@@ -49,6 +53,9 @@
     <Content Include="public\javascripts\respond.min.js" />
     <Content Include="public\javascripts\_references.js" />
     <Content Include="package.json" />
+    <Content Include="public\stylesheets\carousel.css" />
+    <Content Include="public\stylesheets\grid.css" />
+    <Content Include="public\stylesheets\grise.css" />
     <Content Include="typings.json" />
     <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
@@ -61,8 +68,15 @@
     <Content Include="README.md" />
     <Content Include="views\contact.jade" />
     <Content Include="views\about.jade" />
+    <Content Include="views\fodbold.jade" />
+    <Content Include="views\grise.html" />
+    <Content Include="views\grise.jade" />
+    <Content Include="views\heste.html" />
+    <Content Include="views\heste.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
+    <Content Include="views\movies.jade" />
+    <Content Include="views\people.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />

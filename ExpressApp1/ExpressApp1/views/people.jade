@@ -1,0 +1,12 @@
+﻿extends layout
+
+block content
+  h2 #{title}
+  h3 #{message}
+ 
+  - var personList = [    { gender: "male", nationality: "DK"},    { gender: "female", nationality: "AU"} ];
+
+  $.ajax({ url: 'https://randomuser.me/api/?nat=DK', dataType: 'json', success: function(data, status, jqXHR) { var obj = JSON.stringify(data.result);}});
+    h2.name = obj.name
+  
+  

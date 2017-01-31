@@ -14,6 +14,7 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+//app.set('Title', 'Football site');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
@@ -29,6 +30,11 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/fodbold', routes.fodbold);
+app.get('/movies', routes.movies);
+app.get('/heste', routes.heste);
+app.get('/grise', routes.grise);
+app.get('/people', routes.people);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 

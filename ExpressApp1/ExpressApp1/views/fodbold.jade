@@ -1,0 +1,81 @@
+﻿extends layout
+
+block content
+  h2 #{title}
+  h3 #{message}
+  p Use this area to provide additional information.
+ 
+    .input-group
+       span.input-group-addon(id="basic-addon1") 
+         | @
+       input.form-control(type="text",placeholder="Username",aria-describedby="basic-addon1")
+     .input-group
+       input.form-control(type="text",placeholder="Recipient's username",aria-describedby="basic-addon2")
+       span.input-group-addon(id="basic-addon2") 
+         | @example.com
+
+  
+  <p>you have <strong> footballs</strong> dude</p>
+
+  - var x = 5;
+  div
+   ul
+     - for (var i=1; i<=x; i++) {
+       li Hello
+     - }
+
+  h3 Three equal columns
+  p Get three equal-width columns starting at desktops and scaling to large desktops. On mobile devices, tablets and below, the columns will automatically stack.
+     .row 
+        .col-md-4 col-md-4
+        .col-md-4 col-md-4
+        .col-md-4 col-md-4
+
+ 
+
+   .featurette-divider
+    .row.featurette
+      .col-md-7
+        h2.featurette-heading
+         | First featurette heading. 
+         span.text-muted It'll blow your mind.
+        p.lead
+        | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5
+         img.featurette-image.img-responsive.center-block(src='holder.js/500x200/auto' alt='Generic placeholder image')
+
+    .featurette-divider
+      .row.featurette
+        .col-md-7
+           .col-md-push-5
+             h2.featurette-heading
+               | Oh yeah, it's that good. 
+               span.text-muted See for yourself.
+             p.lead
+              | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        .col-md-5
+          .col-md-pull-7
+            img.featurette-image.img-responsive.center-block(data-src='holder.js/500x200/auto', alt='Generic placeholder image')
+
+   .featurette-divider
+     .row.featurette
+       .col-md-7
+         h2.featurette-heading
+            | And lastly, this one. 
+            span.text-muted Checkmate.
+         p.lead
+            | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+       .col-md-5
+         img.featurette-image.img-responsive.center-block(data-src='holder.js/500x200/auto', alt='Generic placeholder image')
+    
+  .featurette-divider
+
+ block scripts
+  script.
+    document.ready(function () 
+    {
+        "#basic-addon1".opacity(0.5).css({ "font-weight": 'bold' });
+    });
+    if (10 == 10) {
+      alert("working")
+    }    

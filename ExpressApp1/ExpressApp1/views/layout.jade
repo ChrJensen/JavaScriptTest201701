@@ -6,7 +6,10 @@ html
     title #{title} - My Express Application
     link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/grid.css')
+    block links
     script(src='/javascripts/modernizr-2.6.2.js')
+    
   body
     .navbar.navbar-inverse.navbar-fixed-top
       .container
@@ -21,6 +24,16 @@ html
             li
               a(href='/') Home
             li
+              a(href='/fodbold') Fodbold
+            li
+              a(href='/movies') Movies
+            li
+              a(href='/heste') Heste
+            li
+              a(href='/grise') Grise
+            li
+              a(href='/people') People
+            li
               a(href='/about') About
             li
               a(href='/contact') Contact
@@ -33,5 +46,7 @@ html
     script(src='/javascripts/jquery-1.10.2.js')
     script(src='/javascripts/bootstrap.js')
     script(src='/javascripts/respond.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js')
+script
 
     block scripts
